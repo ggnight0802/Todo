@@ -13,6 +13,7 @@ class TodoList(generics.ListCreateAPIView):
 class TodoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
+    lookup_field = 'Todo_id'
 
 class TodoCommentList(generics.ListCreateAPIView):
     queryset = Todo_comment.objects.all()
@@ -21,3 +22,4 @@ class TodoCommentList(generics.ListCreateAPIView):
 class TodoCommentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Todo_comment.objects.all()
     serializer_class = TodoCommentSerializer
+    lookup_field = 'Todo_comment_id'

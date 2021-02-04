@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('todos',views.TodoList.as_view()),
-    path('todos/<int:pk>/',views.TodoDetail.as_view()),
-    path('todos/<int:pk>/comments',views.TodoCommentList.as_view()),
-    path('todos/<int:pk>/comments/<int:pk_alt>/',views.TodoCommentDetail.as_view()),
+    path('todos/<int:Todo_id>/',views.TodoDetail.as_view()),
+    path('todos/<int:Todo_id>/comments',views.TodoCommentList.as_view()),
+    path('todos/<int:Todo_id>/comments/<int:Todo_comment_id>/',views.TodoCommentDetail.as_view()),
 ]
